@@ -11,6 +11,6 @@ export class BackendService {
   constructor(private http: HttpClient) { }
 
   getMiembros() {
-    return this.http.get(`${SERVER}Equipo`);
+    return this.http.get(`${SERVER}miembros`);
   }
 }

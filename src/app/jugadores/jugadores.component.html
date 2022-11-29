@@ -1,14 +1,38 @@
 <div class="conteiner">
   <h1 class="text-center">PLANTILLA ACTUAL</h1>
   <h2>Jugadors</h2>
-  <div class="card" style="width: 18rem;">
+  <ul class="list-group list-group-horizontal">
+    <li *ngFor="let miembro of jugadores" class="list-group-item">
+      <div class="card" style="width: 15rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{miembro.nombre}}</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Dorsal: {{miembro.dorsal}}</li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+  <div *ngFor="let miembro of jugadores" class="card" style="width: 15rem;">
     <img src="..." class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-        content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <h5 class="card-title">{{miembro.nombre}}</h5>
     </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Dorsal: {{miembro.dorsal}}</li>
+    </ul>
   </div>
+
   <h2>Cos técnic</h2>
+  <ol class="list-group list-group-numbered">
+    <li *ngFor="let miembro of tecnicos" class="list-group-item d-flex justify-content-between align-items-start">
+      <div class="ms-2 me-auto">
+        <div class="fw-bold">{{miembro.nombre}}</div>
+        <span *ngIf="miembro.tipo==1">Jugador</span>
+        <span *ngIf="miembro.tipo==2">Técnico</span>
+      </div>
+      <span class="badge bg-secondary rounded-pill">{{miembro.dorsal}}</span>
+    </li>
+  </ol>
 </div>
