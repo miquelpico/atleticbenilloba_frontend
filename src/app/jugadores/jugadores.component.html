@@ -1,26 +1,19 @@
-<div class="conteiner">
+<div class="conteiner-fluid">
   <h1 class="text-center">PLANTILLA ACTUAL</h1>
   <h2>Jugadors</h2>
-  <ul class="list-group list-group-horizontal">
-    <li *ngFor="let miembro of jugadores" class="list-group-item">
-      <div class="card" style="width: 15rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">{{miembro.nombre}}</h5>
+  <div class="table-responsive ">
+    <ul class="list-group list-group-horizontal" >
+      <li *ngFor="let miembro of jugadores" class="list-group-item">
+        <div class="bg-success">
+          <div class="card border border-danger" style="width: 20rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Nombre: {{miembro.nombre}}</li>
+              <li class="list-group-item">Dorsal: {{miembro.dorsal}}</li>
+            </ul>
+          </div>
         </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Dorsal: {{miembro.dorsal}}</li>
-        </ul>
-      </div>
-    </li>
-  </ul>
-  <div *ngFor="let miembro of jugadores" class="card" style="width: 15rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">{{miembro.nombre}}</h5>
-    </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">Dorsal: {{miembro.dorsal}}</li>
+      </li>
     </ul>
   </div>
 
