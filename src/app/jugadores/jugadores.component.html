@@ -1,31 +1,24 @@
 <div class="conteiner-fluid">
   <h1 class="text-center">PLANTILLA ACTUAL</h1>
   <h2>Jugadors</h2>
-  <div class="table-responsive ">
-    <ul class="list-group list-group-horizontal" >
-      <li *ngFor="let miembro of jugadores" class="list-group-item">
-        <div class="bg-success">
-          <div class="card border border-danger" style="width: 20rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Nombre: {{miembro.nombre}}</li>
-              <li class="list-group-item">Dorsal: {{miembro.dorsal}}</li>
-            </ul>
-          </div>
-        </div>
-      </li>
-    </ul>
+  <div class="row row-cols-1 row-cols-md-4 g-2">
+    <div *ngFor="let miembro of jugadores" class="card h-100 text-white bg-success mb-3" style="max-width: 21rem;">
+      <div class="card-header"><strong>Nombre: </strong>{{miembro.nombre}}</div>
+      <div class="card-body">
+        <img [src]="'http://localhost:8080/' + miembro.imagen_perfil" class="card-img-top" alt="...">
+        <h5 class="list-group-item text-center mt-4"><strong>Dorsal: </strong>{{miembro.dorsal}}</h5>
+      </div>
+    </div>
   </div>
 
   <h2>Cos técnic</h2>
-  <ol class="list-group list-group-numbered">
-    <li *ngFor="let miembro of tecnicos" class="list-group-item d-flex justify-content-between align-items-start">
-      <div class="ms-2 me-auto">
-        <div class="fw-bold">{{miembro.nombre}}</div>
-        <span *ngIf="miembro.tipo==1">Jugador</span>
-        <span *ngIf="miembro.tipo==2">Técnico</span>
+  <div class="row row-cols-1 row-cols-md-4 g-2">
+    <div *ngFor="let miembro of tecnicos" class="card h-100 text-white bg-success mb-3" style="max-width: 21rem;">
+      <div class="card-header"><strong>Nombre: </strong>{{miembro.nombre}}</div>
+      <div class="card-body">
+        <img [src]="'http://localhost:8080/' + miembro.imagen_perfil" class="card-img-top" alt="...">
+        <h5 class="list-group-item text-center mt-4"><strong>Entrenador</strong></h5>
       </div>
-      <span class="badge bg-secondary rounded-pill">{{miembro.dorsal}}</span>
-    </li>
-  </ol>
+    </div>
+  </div>
 </div>

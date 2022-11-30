@@ -18,6 +18,7 @@ export class JugadoresComponent implements OnInit {
       this.miembros = miembros;
       this.jugadores = miembros.filter((miembro: any) => { return miembro.tipo == 1; })
       this.tecnicos = miembros.filter((miembro: any) => { return miembro.tipo == 2; })
+      this.jugadores.sort((a: any, b: any) => a.dorsal - b.dorsal);
       console.log(this.miembros);
     })
   }

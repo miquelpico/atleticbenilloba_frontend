@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { JugadoresComponent } from './jugadores/jugadores.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { Route, RouterModule } from '@angular/router';
+import { CoverComponent } from './cover/cover.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
 
 const APP_ROUTES: Route[] = [
   {path: '', component: InicioComponent},
@@ -17,7 +20,10 @@ const APP_ROUTES: Route[] = [
   declarations: [
     AppComponent,
     JugadoresComponent,
-    InicioComponent
+    InicioComponent,
+    CoverComponent,
+    FooterComponent,
+    HeaderComponent
   ],
   imports: [
     RouterModule.forRoot(APP_ROUTES, { initialNavigation: 'enabledBlocking', onSameUrlNavigation: 'reload' }),

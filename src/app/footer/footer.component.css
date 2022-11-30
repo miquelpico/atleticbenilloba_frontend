@@ -1,0 +1,10 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px; /* Altura a tu gusto */
+  line-height: 60px; /* Verticalmente centrado */
+  background-color: #9b0000; /* Por si le quieres colocar un color */
+  text-align: center;
+  color: white;
+}
