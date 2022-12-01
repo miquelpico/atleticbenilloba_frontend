@@ -6,13 +6,14 @@ import { AppComponent } from './app.component';
 import { JugadoresComponent } from './jugadores/jugadores.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { Route, RouterModule } from '@angular/router';
-import { CoverComponent } from './cover/cover.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { BenvingudaComponent } from './benvinguda/benvinguda.component';
 
 const APP_ROUTES: Route[] = [
   {path: '', component: InicioComponent},
   {path: 'inicio', component: InicioComponent},
+  {path: 'benvinguda', component: BenvingudaComponent},
   {path: 'listado-plantilla', component: JugadoresComponent}
 ];
 
@@ -21,9 +22,9 @@ const APP_ROUTES: Route[] = [
     AppComponent,
     JugadoresComponent,
     InicioComponent,
-    CoverComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    BenvingudaComponent
   ],
   imports: [
     RouterModule.forRoot(APP_ROUTES, { initialNavigation: 'enabledBlocking', onSameUrlNavigation: 'reload' }),
