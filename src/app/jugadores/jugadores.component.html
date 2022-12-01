@@ -2,23 +2,27 @@
   <div class="container">
     <h1 class="text-center mt-4">PLANTILLA ACTUAL</h1>
     <h2 class="mt-4">Jugadors</h2>
-    <div class="row row-cols-1 row-cols-md-4 g-3">
-      <div *ngFor="let miembro of jugadores" class="card h-100 text-white bg-success" style="max-width: 15rem;">
-        <div class="card-header"><strong>Nombre: </strong>{{miembro.nombre}}</div>
-        <div class="card-body">
-          <img [src]="'http://localhost:8080/' + miembro.imagen_perfil" class="card-img-top" alt="...">
-          <h5 class="list-group-item text-center mt-4"><strong>Dorsal: </strong>{{miembro.dorsal}}</h5>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
+      <div *ngFor="let miembro of jugadores" class="col">
+        <div class="card h-100 text-white bg-success">
+          <div class="card-header"><strong>Nom: </strong>{{miembro.nombre}}</div>
+          <div class="card-body">
+            <img [src]="'http://localhost:8080/' + miembro.imagen_perfil" class="card-img-top" alt="Jugador">
+            <h5 class="list-group-item text-center mt-4"><strong>Dorsal: </strong>{{miembro.dorsal}}</h5>
+          </div>
         </div>
       </div>
     </div>
-    <h2 class="mt-4">Cos técnic</h2>
-    <div class="row row-cols-1 row-cols-md-4 g-2">
-      <div *ngFor="let miembro of tecnicos" class="card h-100 text-white bg-success mb-3 pr-2"
-        style="max-width: 15rem;">
-        <div class="card-header"><strong>Nombre: </strong>{{miembro.nombre}}</div>
-        <div class="card-body">
-          <img [src]="'http://localhost:8080/' + miembro.imagen_perfil" class="card-img-top" alt="...">
-          <h5 class="list-group-item text-center mt-4"><strong>Entrenador</strong></h5>
+
+    <h2 class="mt-4">Cos tècnic</h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
+      <div *ngFor="let miembro of tecnicos" class="col">
+        <div class="card h-100 text-white bg-success">
+          <div class="card-header"><strong>Nom: </strong>{{miembro.nombre}}</div>
+          <div class="card-body">
+            <img [src]="'http://localhost:8080/' + miembro.imagen_perfil" class="card-img-top" alt="Entrenador">
+            <h5 class="list-group-item text-center mt-4"><strong>Entrenador</strong></h5>
+          </div>
         </div>
       </div>
     </div>
