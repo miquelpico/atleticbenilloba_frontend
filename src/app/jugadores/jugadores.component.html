@@ -1,8 +1,8 @@
 <div class="conteiner-fluid">
   <h1 class="text-center">PLANTILLA ACTUAL</h1>
   <h2>Jugadors</h2>
-  <div class="row row-cols-1 row-cols-md-4 g-2">
-    <div *ngFor="let miembro of jugadores" class="card h-100 text-white bg-success mb-3" style="max-width: 21rem;">
+  <div class="row row-cols-2 row-cols-md-4 g-3">
+    <div *ngFor="let miembro of jugadores" class="card h-100 text-white bg-success " style="max-width: 15rem;">
       <div class="card-header"><strong>Nombre: </strong>{{miembro.nombre}}</div>
       <div class="card-body">
         <img [src]="'http://localhost:8080/' + miembro.imagen_perfil" class="card-img-top" alt="...">
@@ -13,7 +13,7 @@
 
   <h2>Cos técnic</h2>
   <div class="row row-cols-1 row-cols-md-4 g-2">
-    <div *ngFor="let miembro of tecnicos" class="card h-100 text-white bg-success mb-3" style="max-width: 21rem;">
+    <div *ngFor="let miembro of tecnicos" class="card h-100 text-white bg-success mb-3 pr-2" style="max-width: 21rem;">
       <div class="card-header"><strong>Nombre: </strong>{{miembro.nombre}}</div>
       <div class="card-body">
         <img [src]="'http://localhost:8080/' + miembro.imagen_perfil" class="card-img-top" alt="...">
