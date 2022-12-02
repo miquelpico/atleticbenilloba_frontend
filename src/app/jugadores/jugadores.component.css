@@ -1,1 +1,6 @@
-
+h1,
+h2 {
+  text-shadow: 1px 1px 1px black,
+    2px 2px 1px black;
+  color: white;
+}
